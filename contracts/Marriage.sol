@@ -1,6 +1,4 @@
-pragma solidity ^0.4.18;
-
-contract Marriage {
+{
 
     address public lawyer;
     uint256 public lastRegistryNo;
@@ -80,7 +78,7 @@ modifier onlylayer(){
             coupleData[_registryNo].status = MarriageStatus(0);
      }
 modifier condiverse(){
-   required( msg.sender==lawer)
+   couple.status=Divorced;
    _
 }
     /**
@@ -97,7 +95,7 @@ modifier condiverse(){
     /// @notice only be called by the lawyer
     function withdrawEther() public onlylawer returns(bool) {
         /* Fix_9(10): Associate the right modifier and write logic to transfer all collected ether to the lawyer and return result*/
-        msg.value=1 ether;
+        msg.value=1 ether
         
     }
 
@@ -106,5 +104,4 @@ modifier condiverse(){
   revert();
       
   }
-
 }
